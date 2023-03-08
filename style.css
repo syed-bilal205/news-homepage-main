@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding:0 ;
+    font-family: 'Inter', sans-serif;
+}
+.mainNavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 8rem;
+}
+.navbarList ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.navbarList ul li{
+    list-style: none;
+}
+.navbarList ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    color: hsl(236, 13%, 42%);
+}
+.navbarList ul li a:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+/* Hero Css */
+.mainHero{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 8rem;
+    gap: 1rem;
+}
+.heroChild{
+    width: 500px;
+    flex: 2;
+}
+.heroChild img{
+    width: 100%;
+}
+.btn{
+    padding: 1rem 1.5rem;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    letter-spacing: 5px;
+}
+.btn:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+.childInnerSection2{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding:1rem 0;
+    /* flex: 0.9; */
+}
+.childInnerSection2 p{
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+}
+.heroChildInner h1{
+    font-size: 3rem;
+    font-weight:bolder;
+}
+.childInnerSection{
+    display: flex;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+.heroChild2{
+    flex: 0.7;
+    height: 500px;
+    background-color: hsl(240, 100%, 5%);
+}
+.heroChild2Inner{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 3rem 1rem;
+}
+.line{
+    width: 100%;
+}
+.heroChild2 h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 32px;
+}
+.heroChild2 h6{
+    color: hsl(36, 100%, 99%);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+.heroChild2 h6:hover{
+    color: hsl(35, 77%, 62%);
+}
+.heroChild2 p{
+    color: hsl(36, 100%, 99%);
+    font-size: 14px;
+    font-weight: 100;
+}
+.mainCard{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 8rem;
+    gap: 2rem;
+}
+.card{
+    display: flex;
+    gap: 1rem;
+}
+.card .img{
+    width: 150px;
+}
+.card .img img{
+    width: 100%;
+}
+.headings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.headings h5{
+    font-size: 2rem;
+    color: hsl(236, 13%, 42%);
+    font-weight: bold;
+}
+.headings h6{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    padding: .5rem 0;
+}
+.headings p{
+    color: hsl(233, 8%, 79%);
+    font-size: .9rem;
+}
+.mobileMenu{
+    display: none;
+    background:transparent ;
+    cursor: pointer;
+}
+.mobileMenu .closeOutline{
+    display: none;
+}
+
+/* media query*/
+@media (max-width:1050px){
+    .mainHero{
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+    .heroChild{
+        width: 100%;
+    }
+    .heroChildInner h1{
+        font-size: 2rem;
+    }
+    .mainCard{
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width:950px) {
+    .navbarList{
+        /* display: none; */
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .navbarList ul{
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 3rem;
+    }
+    .active .navbarList{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .mobileMenu{
+        display: block;
+        z-index: 999;
+    }
+    .active .mobileMenu .closeOutline{
+        display: block;
+    }
+    .active .mobileMenu .menuOutline{
+        display: none;
+    }
+    .mainNavbar{
+        padding: 2rem 2rem;
+    }
+}
